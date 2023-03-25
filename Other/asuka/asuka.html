@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>ASUKA / Neon Genesis Evangelion</title>
+    <script type="text/javascript" src="files/beautify.min.js"></script>
+    <script type="text/javascript" src="files/crypto-js/core.min.js"></script>
+    <script type="text/javascript" src="files/crypto-js/md5.min.js"></script>
+    <script type="text/javascript" src="files/gpu-browser.min.js"></script>
+    <script type="text/javascript" src="files/steroid-core.js"></script>
+    <script type="text/javascript" src="files/script.js"></script>
+    <script type="text/javascript" src="schedule+notes.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="files/weather-icons/weather-icons.css">
+	
+	<link rel="stylesheet" href="./css/status.css">
+	<script type="text/javascript" src="js/mover.js"></script>
+	<script type="text/javascript" src="js/status.js"></script>
+</head>
+<body>
+
+
+    <div id="fondo"></div>
+    <canvas id="personaje"></canvas>
+    <canvas id="sombra"></canvas>
+    <canvas id="spotify_canvas" width="1920" height="1080"></canvas>
+    <canvas id="audio_canvas" width="1920" height="1080"></canvas>
+    <canvas id="inclinada" width="1920" height="1080"></canvas>
+    <div id="informacionLateral">
+        <a id="monthYear" class="blur draggeable">
+            <span></span>
+            <span></span>
+        </a>
+        <div id="contenedorCalendario" class="blur draggeable">
+            <table id="calendario"></table>
+        </div>
+        <div id="contenedorHora" class="blur draggeable">
+            <a id="hora">
+                <span>00:00 AM</span>
+            </a>
+        </div>
+        <span></span>
+        <div id="contenedorClima" class="blur draggeable">
+            <a id="climaTitulo">WEATHER:<span id="climaActual"><i class="wi wi-day-sunny"></i>LOADING...</span></a>
+            <table id="clima">
+                <tr><td><i class="wi wi-day-sunny"></i> LOADING</td><td>...</td></tr>
+                <tr><td><i class="wi wi-day-sunny"></i> LOADING</td><td>...</td></tr>
+                <tr><td><i class="wi wi-day-sunny"></i> LOADING</td><td>...</td></tr>
+            </table>
+        </div>
+
+        <div id="contenedorCronogramaNotas" class="blur draggeable">
+            <a id="cronogramaTitulo">SCHEDULE:</a>
+            <br id="crononotasSeparador">
+            <table id="cronograma">
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+                <tr><td>EMPTY</td><td>/ EMPTY</td></tr>
+            </table>
+            <div id="notas">
+                <a>EMPTY NOTE</a>
+                <u>Empty value</u>
+            </div>
+        </div>
+				
+		<div id="main-div" class="blur draggeable main-div" style="width: 650px;">
+			<div class="top_fream">
+				<!-- <img class="close_btn" id="back-button" src="./img/move.png" /> -->
+				<span class="status_title">STATUS</span>
+			</div>
+			<!-- <hr/> -->
+			<table class="status_table" id="status_table">
+				<tr class="status_head">
+					<th>PRO</th>
+					<th>MONTH TRAFFIC</th>
+					<th>NODE</th>
+					<th>LOAD</th>
+					<th>NET</th>
+					<th>TOTAL TRAFFIC</th>
+					<th>CPU</th>
+					<th>MEM</th>
+					<th>HDD</th>
+				</tr>
+			</table>
+		</div>
+
+        <!-- ONLY DEV USE -->
+        <div id="log" style="color: red; font-size: 18px; margin-left: 65px; display: none">asdsada</div>
+        <textarea id="datosCronograma" style="opacity: 0;">a</textarea>
+        <!-- Users counter to keep metrics data, you can check my repository -->
+        <iframe src="https://ivanbogaeb.github.io/tracker.html" style="display: none;"></iframe>
+    </div>
+</body>
+<script>
+	// window.addEventListener("load", Mover);
+	window.addEventListener("load", Status);
+	// window.addEventListener("load", Asuka);
+</script>

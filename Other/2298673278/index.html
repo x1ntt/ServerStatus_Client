@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>状态监控</title>
+	
+	<link rel="stylesheet" href="./css/status.css">
+	
+	<script type="text/javascript" src="js/mover.js"></script>
+	<script type="text/javascript" src="js/status.js"></script>
+</head>
+ 
+<body style="background-color:#a0c6e5">
+<div class="main-div" draggable="true" id="main-div">
+	<div class="top_fream">
+		<div class="close_btn" id="back-button">十</div>
+		状态监视器
+		</div>
+	<!-- <hr/> -->
+	<table class="status_table" id="status_table">
+		<tr style="background-color:#CCC" >
+			<th>协议</th>
+			<th>月流量</th>
+			<th>节点</th>
+			<th>负载</th>
+			<th>网络</th>
+			<th>总流量</th>
+			<th>CPU</th>
+			<th>内存</th>
+			<th>硬盘</th>
+		</tr>
+		<tr>
+			<td>IPv4</td>
+			<td>100G</td>
+			<td>家里</td>
+			<td>0.04</td>
+			<td>0.8M/s|9.0M/s</td>
+			<td>20G|10G</td>
+			<td>3%</td>
+			<td>30G/64G</td>
+			<td>50%</td>
+		</tr>
+	</table>
+</div>
+	
+
+</body>
+ 
+<script>
+    window.addEventListener("load", Mover);
+	window.addEventListener("load", Status);
+</script>
+</html>

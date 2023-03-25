@@ -1,0 +1,913 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "[h1]ASUKA / Neon Genesis Evangelion[/h1]\n[hr]\n[h2]Features:[/h2]\n[list]\n    [*] Spotify Integration.\n    [*] Audio Responsive.\n    [*] Calendar.\n    [*] Clock.\n    [*] Weather.\n    [*] Schedule.\n    [*] Notes.\n    [*] Customizable.\n[/list]\n\n[h2]Configuration Guide:[/h2]\n[i]Following my guide, you will be able to create your own Weather API, activate your Spotify integration and customize your brand new Schedule and Notes system.[/i]\nOpen my guide by clicking: [b][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2298723356]Here ♥[/url][/b]\n\n[h2]Support me via Ko-Fi:[/h2]\n[i]Supporting me, means I can keep working on new functions and crazy wallpapers for the community, if you would like, with a small tip is more than enough ♥.[/i]\n\n[list]\n[*]You can do it by clicking: [b][url=https://ko-fi.com/noxt666]Here ♥[/url][/b]\n[/list]\n\n[h1]Join my Discord Server:[/h1]\n[i]If you want to report an issue that you might experience or get updates about upcoming wallpapers/features you can join [b][url=https://discord.gg/GvNvXY26Mb]Here 💖[/url][/b]![/i]",
+	"file" : "asuka.html",
+	"general" : 
+	{
+		"properties" : 
+		{
+			"_24hsformat" : 
+			{
+				"index" : 31,
+				"order" : 131,
+				"text" : "24hs Format",
+				"type" : "bool",
+				"value" : false
+			},
+			"accentColor1" : 
+			{
+				"index" : 13,
+				"order" : 113,
+				"text" : "Accent Color",
+				"type" : "color",
+				"value" : "1 0 0"
+			},
+			"audiobarsamount" : 
+			{
+				"fraction" : false,
+				"index" : 57,
+				"max" : 128,
+				"min" : 0,
+				"order" : 157,
+				"text" : "Audio Bars",
+				"type" : "slider",
+				"value" : 64
+			},
+			"audiobarsspread" : 
+			{
+				"fraction" : false,
+				"index" : 60,
+				"max" : 50,
+				"min" : 0,
+				"order" : 160,
+				"text" : "Bars Spread",
+				"type" : "slider",
+				"value" : 10
+			},
+			"audiobarswidth" : 
+			{
+				"fraction" : false,
+				"index" : 59,
+				"max" : 10,
+				"min" : 1,
+				"order" : 159,
+				"text" : "Bars Width",
+				"type" : "slider",
+				"value" : 4
+			},
+			"audiovisualizer_text" : 
+			{
+				"index" : 56,
+				"order" : 156,
+				"text" : "<hr><h4>🎶 Audio Visualizer</h4><hr>",
+				"type" : "text"
+			},
+			"audiovisualizeradvancedsettings" : 
+			{
+				"condition" : "audiovisualizeradvancedsettings.value ? audiovisualizeradvancedsettings.text = audiovisualizeradvancedsettings.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : audiovisualizeradvancedsettings.text = audiovisualizeradvancedsettings.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 61,
+				"order" : 161,
+				"text" : "<span class='ugcDanger'>Audio Visualizer Advanced Settings</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"audiovisualizermovex" : 
+			{
+				"condition" : "audiovisualizeradvancedsettings.value",
+				"fraction" : true,
+				"index" : 63,
+				"max" : 100,
+				"min" : -100,
+				"order" : 163,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Left - Right",
+				"type" : "slider",
+				"value" : 0
+			},
+			"audiovisualizermovey" : 
+			{
+				"condition" : "audiovisualizeradvancedsettings.value",
+				"fraction" : true,
+				"index" : 64,
+				"max" : 100,
+				"min" : -100,
+				"order" : 164,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Down - Top",
+				"type" : "slider",
+				"value" : 0
+			},
+			"audiovisualizerrotation" : 
+			{
+				"condition" : "audiovisualizeradvancedsettings.value",
+				"fraction" : true,
+				"index" : 65,
+				"max" : 360,
+				"min" : -360,
+				"order" : 165,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Rotation (Deg)",
+				"type" : "slider",
+				"value" : 0
+			},
+			"audiovisualizershadowblur" : 
+			{
+				"condition" : "audiovisualizeradvancedsettings.value",
+				"fraction" : false,
+				"index" : 62,
+				"max" : 10,
+				"min" : 0,
+				"order" : 162,
+				"text" : "Shadow Blur",
+				"type" : "slider",
+				"value" : 2
+			},
+			"audiovisualizershadowcolor" : 
+			{
+				"condition" : "",
+				"index" : 20,
+				"order" : 120,
+				"text" : "Audio Visualizer Shadow",
+				"type" : "color",
+				"value" : "1 0 0"
+			},
+			"backgroundColor" : 
+			{
+				"index" : 16,
+				"order" : 116,
+				"text" : "Solid Background",
+				"type" : "color",
+				"value" : "0.14901960784313725 0.14901960784313725 0.1450980392156863"
+			},
+			"background_blur_text" : 
+			{
+				"condition" : "backgroundimage.value",
+				"index" : 49,
+				"order" : 149,
+				"text" : "<span class='ugcSub'>(Use this function only when you have an image as background, otherwise it won't work)</span><br>"
+			},
+			"background_image_subtext" : 
+			{
+				"index" : 46,
+				"order" : 146,
+				"text" : "<span class='ugcSub'>(All types of images including GIFs are supported, check the guide for more details about animated backgrounds)</span><br>"
+			},
+			"backgroundalignment" : 
+			{
+				"condition" : "backgroundimage.value",
+				"index" : 47,
+				"options" : 
+				[
+					{
+						"label" : "Contain",
+						"value" : "0"
+					},
+					{
+						"label" : "Cover",
+						"value" : "1"
+					}
+				],
+				"order" : 147,
+				"text" : "Background Alignment",
+				"type" : "combo",
+				"value" : "1"
+			},
+			"backgroundblur" : 
+			{
+				"condition" : "backgroundimage.value",
+				"fraction" : true,
+				"index" : 48,
+				"max" : 30,
+				"min" : 0,
+				"order" : 148,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Background Blur",
+				"type" : "slider",
+				"value" : 0
+			},
+			"backgroundimage" : 
+			{
+				"index" : 45,
+				"order" : 145,
+				"text" : "Background Image",
+				"type" : "file",
+				"value" : ""
+			},
+			"boldtitles" : 
+			{
+				"condition" : "textfont.value == 1",
+				"index" : 28,
+				"order" : 128,
+				"text" : "Bold Titles",
+				"type" : "bool",
+				"value" : false
+			},
+			"cleanschedule" : 
+			{
+				"condition" : "cleanschedule.value ? cleanschedule.text = cleanschedule.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : cleanschedule.text = cleanschedule.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 86,
+				"order" : 186,
+				"text" : "<span class='ugcDanger'>Clean Schedule Memory (Disabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"copyschedule" : 
+			{
+				"condition" : "copyschedule.value ? copyschedule.text = copyschedule.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : copyschedule.text = copyschedule.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 84,
+				"order" : 184,
+				"text" : "<span class='ugcDanger'>Copy Schedule (Disabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"copyschedulesidenote" : 
+			{
+				"index" : 85,
+				"order" : 185,
+				"text" : "<span class='ugcSub'>Remember to disable this option as soon as your schedule is already copied to your clipboard.</span><br><br>"
+			},
+			"customization" : 
+			{
+				"index" : 0,
+				"order" : 100,
+				"text" : "<a href='https://steamcommunity.com/sharedfiles/filedetails/?id=2298723356'>Check Configuration Tutorial</a><span class='ugcSub'> (click for details)</span>"
+			},
+			"discordserver" : 
+			{
+				"index" : 1,
+				"order" : 101,
+				"text" : "<a href='https://discord.gg/GvNvXY26Mb'>Discord Server</a><span class='ugcSub'> (click for details)</span>"
+			},
+			"displayCalendar" : 
+			{
+				"index" : 29,
+				"order" : 129,
+				"text" : "Calendar",
+				"type" : "bool",
+				"value" : true
+			},
+			"displayClock" : 
+			{
+				"index" : 30,
+				"order" : 130,
+				"text" : "Clock",
+				"type" : "bool",
+				"value" : true
+			},
+			"displayNotes" : 
+			{
+				"index" : 33,
+				"order" : 133,
+				"text" : "Notes",
+				"type" : "bool",
+				"value" : true
+			},
+			"displaySchedule" : 
+			{
+				"index" : 32,
+				"order" : 132,
+				"text" : "Schedule",
+				"type" : "bool",
+				"value" : true
+			},
+			"displaydate" : 
+			{
+				"index" : 26,
+				"order" : 126,
+				"text" : "Date",
+				"type" : "bool",
+				"value" : true
+			},
+			"elementslock" : 
+			{
+				"condition" : "elementslock.value ? elementslock.text = elementslock.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : elementslock.text = elementslock.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 42,
+				"order" : 142,
+				"text" : "<span class='ugcDanger'>Elements Preset Lock (Disabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"elementslockpreset" : 
+			{
+				"condition" : "elementslock.value",
+				"index" : 43,
+				"order" : 143,
+				"text" : "Lock Preset",
+				"type" : "textinput",
+				"value" : ""
+			},
+			"fontfamily" : 
+			{
+				"condition" : "textfont.value == 1",
+				"index" : 27,
+				"order" : 127,
+				"text" : "Font Family",
+				"type" : "textinput",
+				"value" : ""
+			},
+			"fonturl" : 
+			{
+				"condition" : "textfont.value == 1",
+				"index" : 25,
+				"order" : 125,
+				"text" : "Font URL",
+				"type" : "textinput",
+				"value" : ""
+			},
+			"hideupdatealert" : 
+			{
+				"index" : 2,
+				"order" : 102,
+				"text" : "💬 Hide updates alert",
+				"type" : "bool",
+				"value" : false
+			},
+			"maxHeight" : 
+			{
+				"condition" : "",
+				"index" : 58,
+				"max" : 300,
+				"min" : 0,
+				"order" : 158,
+				"text" : "Bars Height",
+				"type" : "slider",
+				"value" : 160
+			},
+			"memoryScheduleSideNote" : 
+			{
+				"index" : 87,
+				"order" : 187,
+				"text" : "<span class='ugcSub'>This option will clean your memory, not your file. This should be used when you want to reset your schedule to default.</span><br><br>"
+			},
+			"resetwidgetslocation" : 
+			{
+				"condition" : "resetwidgetslocation.value ? resetwidgetslocation.text = resetwidgetslocation.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : resetwidgetslocation.text = resetwidgetslocation.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 34,
+				"order" : 134,
+				"text" : "<span class='ugcDanger'>Reset Widgets Location (Disabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "1 0 0"
+			},
+			"separate0" : 
+			{
+				"index" : 23,
+				"order" : 123,
+				"text" : "<hr><h4>⚙️ Side Bar</h4><hr>"
+			},
+			"separate10" : 
+			{
+				"index" : 3,
+				"order" : 103,
+				"text" : "<hr><h4>🌐 Online Features (Alpha)</h4><hr>",
+				"type" : "bool",
+				"value" : false
+			},
+			"separate3" : 
+			{
+				"index" : 12,
+				"order" : 112,
+				"text" : "<hr><h4>🎨 Color Customization</h4><hr>"
+			},
+			"separate4" : 
+			{
+				"index" : 70,
+				"order" : 170,
+				"text" : "<hr><h4>🥰 Character</h4><hr>"
+			},
+			"separate5" : 
+			{
+				"index" : 77,
+				"order" : 177,
+				"text" : "<br><span class='ugcSub'>SHADOW</span>"
+			},
+			"separate6" : 
+			{
+				"index" : 44,
+				"order" : 144,
+				"text" : "<hr><h4>🖼️ Background</h4><hr>"
+			},
+			"separate8" : 
+			{
+				"index" : 83,
+				"order" : 183,
+				"text" : "<hr><h4>📝 Schedule and Notes</h4><hr>"
+			},
+			"separate9" : 
+			{
+				"condition" : "wallofsupporterstoggle.value",
+				"index" : 91,
+				"order" : 191,
+				"text" : "<span class='ugcSub'>WALL OF SUPPORTERS ♥</span>"
+			},
+			"shadowAdvancedText" : 
+			{
+				"condition" : "shadowAdvancedText.value ? shadowAdvancedText.text = shadowAdvancedText.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : shadowAdvancedText.text = shadowAdvancedText.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 79,
+				"order" : 179,
+				"text" : "<span class='ugcDanger'>Shadow Advanced Settings</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"shadowScale" : 
+			{
+				"condition" : "shadowAdvancedText.value",
+				"index" : 82,
+				"max" : 100,
+				"min" : 0,
+				"order" : 182,
+				"text" : "Shadow Size",
+				"type" : "slider",
+				"value" : 100
+			},
+			"shadowX" : 
+			{
+				"condition" : "shadowAdvancedText.value",
+				"index" : 80,
+				"max" : 100,
+				"min" : -100,
+				"order" : 180,
+				"text" : "Left - Right",
+				"type" : "slider",
+				"value" : 45
+			},
+			"shadowY" : 
+			{
+				"condition" : "shadowAdvancedText.value",
+				"index" : 81,
+				"max" : 100,
+				"min" : -100,
+				"order" : 181,
+				"text" : "Up - Down",
+				"type" : "slider",
+				"value" : 20
+			},
+			"sidebaradvancedsettings_toggle" : 
+			{
+				"condition" : "sidebaradvancedsettings_toggle.value ? sidebaradvancedsettings_toggle.text = sidebaradvancedsettings_toggle.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : sidebaradvancedsettings_toggle.text = sidebaradvancedsettings_toggle.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 35,
+				"order" : 135,
+				"text" : "<span class='ugcDanger'>Side Bar Advanced Settings (Disabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"sidebarbackgroundblur" : 
+			{
+				"condition" : "sidebaradvancedsettings_toggle.value",
+				"fraction" : false,
+				"index" : 37,
+				"max" : 100,
+				"min" : 0,
+				"order" : 137,
+				"text" : "Blur",
+				"type" : "slider",
+				"value" : 10
+			},
+			"sidebarbackgroundcolor" : 
+			{
+				"condition" : "",
+				"index" : 22,
+				"order" : 122,
+				"text" : "Side Bar Background Blur",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"sidebarbackgroundopacity" : 
+			{
+				"condition" : "sidebaradvancedsettings_toggle.value",
+				"fraction" : true,
+				"index" : 38,
+				"max" : 1,
+				"min" : 0,
+				"order" : 138,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Opacity",
+				"type" : "slider",
+				"value" : 0
+			},
+			"sidebarbordercolor" : 
+			{
+				"condition" : "",
+				"index" : 21,
+				"order" : 121,
+				"text" : "Side Bar Border",
+				"type" : "color",
+				"value" : "0.396078431372549 0.396078431372549 0.396078431372549"
+			},
+			"sidebarborderradius" : 
+			{
+				"condition" : "sidebaradvancedsettings_toggle.value",
+				"fraction" : false,
+				"index" : 41,
+				"max" : 30,
+				"min" : 0,
+				"order" : 141,
+				"text" : "Radius",
+				"type" : "slider",
+				"value" : 3
+			},
+			"sidebarborderwidth" : 
+			{
+				"condition" : "sidebaradvancedsettings_toggle.value",
+				"fraction" : false,
+				"index" : 40,
+				"max" : 20,
+				"min" : 0,
+				"order" : 140,
+				"text" : "Width",
+				"type" : "slider",
+				"value" : 0
+			},
+			"spanclassugcsubbackgroundblurspan" : 
+			{
+				"condition" : "sidebaradvancedsettings_toggle.value",
+				"index" : 36,
+				"order" : 136,
+				"text" : "<br><span class='ugcSub'>BACKGROUND BLUR</span>"
+			},
+			"spanclassugcsubborderspan" : 
+			{
+				"condition" : "sidebaradvancedsettings_toggle.value",
+				"index" : 39,
+				"order" : 139,
+				"text" : "<br><span class='ugcSub'>BORDER</span>"
+			},
+			"spotifyadvancedsettings" : 
+			{
+				"condition" : "spotifyadvancedsettings.value ? spotifyadvancedsettings.text = spotifyadvancedsettings.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : spotifyadvancedsettings.text = spotifyadvancedsettings.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 66,
+				"order" : 166,
+				"text" : "<span class='ugcDanger'>Spotify Advanced Settings</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"spotifycanvasmovex" : 
+			{
+				"condition" : "spotifyadvancedsettings.value",
+				"fraction" : true,
+				"index" : 67,
+				"max" : 100,
+				"min" : -100,
+				"order" : 167,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Right - Left",
+				"type" : "slider",
+				"value" : 6
+			},
+			"spotifycanvasmovey" : 
+			{
+				"condition" : "spotifyadvancedsettings.value",
+				"fraction" : true,
+				"index" : 68,
+				"max" : 100,
+				"min" : -100,
+				"order" : 168,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Down - Top",
+				"type" : "slider",
+				"value" : 23.4
+			},
+			"spotifycanvasrotation" : 
+			{
+				"condition" : "spotifyadvancedsettings.value",
+				"fraction" : true,
+				"index" : 69,
+				"max" : 360,
+				"min" : -360,
+				"order" : 169,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Rotation (Deg)",
+				"type" : "slider",
+				"value" : -28.4
+			},
+			"steroidlogo" : 
+			{
+				"condition" : "",
+				"index" : 4,
+				"order" : 104,
+				"text" : "<img src='https://steroid-app.github.io/images/banner-white.svg' width='140px' heigth='20px' alt='Steroid'><br>"
+			},
+			"steroidspotify" : 
+			{
+				"condition" : "steroidspotify.value ? steroidspotify.text = steroidspotify.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : steroidspotify.text = steroidspotify.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 7,
+				"order" : 107,
+				"text" : "<span class='ugcDanger'>🎧 Spotify (Enabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"steroidusername" : 
+			{
+				"index" : 5,
+				"order" : 105,
+				"text" : "✉️ Email",
+				"type" : "textinput",
+				"value" : ""
+			},
+			"steroidwallpapertoken" : 
+			{
+				"index" : 6,
+				"order" : 106,
+				"text" : "🔑 Token",
+				"type" : "textinput",
+				"value" : ""
+			},
+			"steroidweather" : 
+			{
+				"condition" : "steroidweather.value ? steroidweather.text = steroidweather.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : steroidweather.text = steroidweather.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 8,
+				"order" : 108,
+				"text" : "<span class='ugcDanger'>🌤️ Weather (Enabled)</span>",
+				"type" : "bool",
+				"value" : true
+			},
+			"steroidweathercurrent" : 
+			{
+				"condition" : "steroidweather.value",
+				"index" : 9,
+				"order" : 109,
+				"text" : "‌ ‌‌‌‌ ‌‌ ‌‌‌‌ ‌‌• Current condition",
+				"type" : "bool",
+				"value" : true
+			},
+			"steroidweatherforecast" : 
+			{
+				"condition" : "steroidweather.value",
+				"index" : 10,
+				"order" : 110,
+				"text" : "‌ ‌‌‌‌ ‌‌ ‌‌‌‌ ‌‌• Forecast information",
+				"type" : "bool",
+				"value" : true
+			},
+			"steroidweathertemperature" : 
+			{
+				"condition" : "steroidweather.value",
+				"index" : 11,
+				"options" : 
+				[
+					{
+						"label" : "°C",
+						"value" : "Metric"
+					},
+					{
+						"label" : "°F",
+						"value" : "Imperial"
+					}
+				],
+				"order" : 111,
+				"text" : "‌ ‌‌‌‌ ‌‌ ‌‌‌‌ ‌‌‌‌‌‌‌‌‌‌‌• Temperature",
+				"type" : "combo",
+				"value" : "Metric"
+			},
+			"support" : 
+			{
+				"index" : 88,
+				"order" : 188,
+				"text" : "<a href='https://ko-fi.com/noxt666'>Support me here ♥</a><span class='ugcSub'> (click for details)</span>"
+			},
+			"textColor1" : 
+			{
+				"index" : 14,
+				"order" : 114,
+				"text" : "Primary Text",
+				"type" : "color",
+				"value" : "0.3137254901960784 0.3137254901960784 0.3137254901960784"
+			},
+			"textColor2" : 
+			{
+				"index" : 15,
+				"order" : 115,
+				"text" : "Secondary Text",
+				"type" : "color",
+				"value" : "0.7333333333333333 0.7333333333333333 0.7333333333333333"
+			},
+			"textfont" : 
+			{
+				"index" : 24,
+				"options" : 
+				[
+					{
+						"label" : "Default",
+						"value" : "0"
+					},
+					{
+						"label" : "Custom",
+						"value" : "1"
+					}
+				],
+				"order" : 124,
+				"text" : "Font Style",
+				"type" : "combo",
+				"value" : "0"
+			},
+			"tiltedBarColor" : 
+			{
+				"index" : 17,
+				"order" : 117,
+				"text" : "Tilted Bar",
+				"type" : "color",
+				"value" : "0.5019607843137255 0.5019607843137255 0.5019607843137255"
+			},
+			"tiltedbar_text" : 
+			{
+				"index" : 50,
+				"order" : 150,
+				"text" : "<hr><h4>📐 Tilted Bar</h4><hr>"
+			},
+			"tiltedbaradvancedsettings" : 
+			{
+				"condition" : "tiltedbaradvancedsettings.value ? tiltedbaradvancedsettings.text = tiltedbaradvancedsettings.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : tiltedbaradvancedsettings.text = tiltedbaradvancedsettings.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 52,
+				"order" : 152,
+				"text" : "<span class='ugcDanger'>Tilted Bar Advanced Settings (Disabled)</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"tiltedbarmovex" : 
+			{
+				"condition" : "tiltedbaradvancedsettings.value",
+				"fraction" : true,
+				"index" : 53,
+				"max" : 100,
+				"min" : -100,
+				"order" : 153,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Left - Right",
+				"type" : "slider",
+				"value" : 0
+			},
+			"tiltedbarmovey" : 
+			{
+				"condition" : "tiltedbaradvancedsettings.value",
+				"fraction" : true,
+				"index" : 54,
+				"max" : 100,
+				"min" : -100,
+				"order" : 154,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Down - Top",
+				"type" : "slider",
+				"value" : 0
+			},
+			"tiltedbaropacity" : 
+			{
+				"fraction" : true,
+				"index" : 51,
+				"max" : 1,
+				"min" : 0,
+				"order" : 151,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Tilted Bar Opacity",
+				"type" : "slider",
+				"value" : 1
+			},
+			"tiltedbarrotation" : 
+			{
+				"condition" : "tiltedbaradvancedsettings.value",
+				"fraction" : true,
+				"index" : 55,
+				"max" : 360,
+				"min" : -360,
+				"order" : 155,
+				"precision" : 3,
+				"step" : 0.01,
+				"text" : "Rotation (Deg)",
+				"type" : "slider",
+				"value" : 0
+			},
+			"version" : 
+			{
+				"index" : 89,
+				"order" : 189,
+				"text" : "Version: 1.6.2<span class='ugcSub'> (Changelog in Workshop)</span>"
+			},
+			"visColor" : 
+			{
+				"index" : 19,
+				"order" : 119,
+				"text" : "Audio Visualizer",
+				"type" : "color",
+				"value" : "1 0 0"
+			},
+			"waifuAdvancedText" : 
+			{
+				"condition" : "waifuAdvancedText.value ? waifuAdvancedText.text = waifuAdvancedText.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : waifuAdvancedText.text = waifuAdvancedText.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 73,
+				"order" : 173,
+				"text" : "<span class='ugcDanger'>Character Advanced Settings</span>",
+				"type" : "bool",
+				"value" : false
+			},
+			"waifuInvert" : 
+			{
+				"condition" : "waifuSelector.value",
+				"index" : 72,
+				"order" : 172,
+				"text" : "Invert Character",
+				"type" : "bool",
+				"value" : false
+			},
+			"waifuScale" : 
+			{
+				"condition" : "waifuAdvancedText.value",
+				"index" : 76,
+				"max" : 100,
+				"min" : 0,
+				"order" : 176,
+				"text" : "Character Size",
+				"type" : "slider",
+				"value" : 100
+			},
+			"waifuSelector" : 
+			{
+				"fileType" : "image",
+				"index" : 71,
+				"order" : 171,
+				"text" : "Your Character (PNG)",
+				"type" : "file"
+			},
+			"waifuShadowColor" : 
+			{
+				"index" : 18,
+				"order" : 118,
+				"text" : "Character Shadow",
+				"type" : "color",
+				"value" : "1 0 0"
+			},
+			"waifuShadowOpacity" : 
+			{
+				"index" : 78,
+				"max" : 100,
+				"min" : 0,
+				"order" : 178,
+				"text" : "Shadow Opacity",
+				"type" : "slider",
+				"value" : 100
+			},
+			"waifuX" : 
+			{
+				"condition" : "waifuAdvancedText.value",
+				"index" : 74,
+				"max" : 100,
+				"min" : -100,
+				"order" : 174,
+				"text" : "Left - Right",
+				"type" : "slider",
+				"value" : 0
+			},
+			"waifuY" : 
+			{
+				"condition" : "waifuAdvancedText.value",
+				"index" : 75,
+				"max" : 100,
+				"min" : -100,
+				"order" : 175,
+				"text" : "Up - Down",
+				"type" : "slider",
+				"value" : 0
+			},
+			"wallofsupporters" : 
+			{
+				"condition" : "wallofsupporterstoggle.value",
+				"index" : 92,
+				"order" : 192,
+				"text" : "<span class='ugcSub'>~ ~</span> Tom <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Christopher <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> 장한윤 <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Chase <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Neikea <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> メJohnWickシ <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Bellflare <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Sleepy <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Subrosa <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Raen <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Mitrik89 <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Tsquid Tsquid <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Luke <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Shmeagull <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Star bravo <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Squ4reCac7us <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Carlos <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Absol <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Ugo <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> zBlueHawk <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Grief <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> CheLMonster <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Loke <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Jesus G. <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Amro A. <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Tay the plush lizard <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> Tweety <span class='ugcDanger'>♥</span> <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> snf404 <span class='ugcDanger'>♥</span> <span class='ugcDanger'>♥</span><br><span class='ugcSub'>~ ~</span> 0ttomannn <span class='ugcDanger'>♥</span> <span class='ugcDanger'>♥</span>"
+			},
+			"wallofsupporterstoggle" : 
+			{
+				"condition" : "wallofsupporterstoggle.value ? wallofsupporterstoggle.text = wallofsupporterstoggle.text.replace('Disabled', 'Enabled').replace('ugcDanger','ugcSuccess') : wallofsupporterstoggle.text = wallofsupporterstoggle.text.replace('Enabled', 'Disabled').replace('ugcSuccess','ugcDanger')",
+				"index" : 90,
+				"order" : 190,
+				"text" : "<span class='ugcDanger'>View Wall of Supporters (Enabled)</span>",
+				"type" : "bool",
+				"value" : true
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"preview" : "preview.gif",
+	"tags" : [ "Anime" ],
+	"title" : "ASUKA / Neon Genesis Evangelion",
+	"type" : "Web",
+	"version" : 52,
+	"visibility" : "public",
+	"workshopid" : "2298673278",
+	"workshopurl" : "steam://url/CommunityFilePage/2298673278"
+}

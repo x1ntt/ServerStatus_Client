@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>悬浮窗拖动点击事件</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            border-radius: 50%;
+            left: calc(100% - 100px);
+            background-color: red;
+        }
+    </style>
+</head>
+ 
+<body>
+<div class="div" draggable="true" id="back-button"></div>
+</body>
+ 
+<script>
+ 
+    window.onload = function () {
+        // 标记是拖曳还是点击
+        var oDiv = document.getElementById('back-button');
+        var disX, moveX, L, T, starX, starY, starXEnd, starYEnd;
+ 
+        let beforeX, beforeY; // 鼠标点击的坐标
+		var is_clicked = false;
+		
+		oDiv.addEventListener('click', function(e){
+			var mousemove_fun = function(eve){
+				L = e.clientX - disX;
+				T = e.clientY - disY;
+				moveX = L + 'px';
+				moveY = T + 'px';
+				this.style.left = moveX;
+				this.style.top = moveY;
+			}
+			
+			if (is_clicked){
+				is_clicked = false;
+				oDiv.style.backgroundColor="red";
+				oDiv.removeEventListener("mousemove", mousemove_fun);
+			}else{
+				is_clicked = true;
+				oDiv.style.backgroundColor="black";
+				
+				disX = e.clientX - this.offsetLeft;
+				disY = e.clientY - this.offsetTop;
+				
+				oDiv.addEventListener("mousemove", mousemove_fun); 
+			}
+		});
+		
+		oDiv.addEventListener('dragstart', function(e){
+			// console.log(e);
+			disX = e.clientX - this.offsetLeft;
+			disY = e.clientY - this.offsetTop;
+		});
+		
+		oDiv.addEventListener('drag', function(e){
+			// console.log(e);
+			L = e.clientX - disX;
+			T = e.clientY - disY;
+			
+			if (L < 0) {
+                L = 0;
+            } else if (L > document.documentElement.clientWidth - this.offsetWidth) {
+                L = document.documentElement.clientWidth - this.offsetWidth;
+            }
+            if (T < 0) {
+                T = 0;
+            } else if (T > document.documentElement.clientHeight - this.offsetHeight) {
+                T = document.documentElement.clientHeight - this.offsetHeight;
+            }
+			
+			moveX = L + 'px';
+            moveY = T + 'px';
+            this.style.left = moveX;
+            this.style.top = moveY;
+			e.preventDefault();
+		});
+		
+		oDiv.addEventListener('dragend', function(e){
+			// console.log(e);
+			L = e.clientX - disX;
+			T = e.clientY - disY;
+			if (L < 0) {
+                L = 0;
+            } else if (L > document.documentElement.clientWidth - this.offsetWidth) {
+                L = document.documentElement.clientWidth - this.offsetWidth;
+            }
+            if (T < 0) {
+                T = 0;
+            } else if (T > document.documentElement.clientHeight - this.offsetHeight) {
+                T = document.documentElement.clientHeight - this.offsetHeight;
+            }
+			moveX = L + 'px';
+            moveY = T + 'px';
+            this.style.left = moveX;
+            this.style.top = moveY;
+			e.preventDefault();
+		});
+		
+        oDiv.addEventListener('touchstart', function (e) {
+			// console.log(e);
+            beforeX = this.offsetLeft;
+            beforeY = this.offsetTop;
+ 
+            e.preventDefault();
+            // 阻止触摸时页面的滚动，缩放
+            disX = e.touches[0].clientX - this.offsetLeft;
+            disY = e.touches[0].clientY - this.offsetTop;
+            // 手指按下时的坐标
+            starX = e.touches[0].clientX;
+            starY = e.touches[0].clientY;
+        });
+ 
+        oDiv.addEventListener('touchmove', function (e) {
+			// console.log(e);
+            L = e.touches[0].clientX - disX;
+            T = e.touches[0].clientY - disY; // 移动时 当前位置与起始位置之间的差值
+            starXEnd = e.touches[0].clientX - starX;
+            starYEnd = e.touches[0].clientY - starY;
+ 
+            if (L < 0) {
+                // 限制拖拽的X范围，不能拖出屏幕
+                L = 0;
+            } else if (L > document.documentElement.clientWidth - this.offsetWidth) {
+                L = document.documentElement.clientWidth - this.offsetWidth;
+            }
+            if (T < 0) {
+                // 限制拖拽的Y范围，不能拖出屏幕
+                T = 0;
+            } else if (T > document.documentElement.clientHeight - this.offsetHeight) {
+                T = document.documentElement.clientHeight - this.offsetHeight;
+            }
+            moveX = L + 'px';
+            moveY = T + 'px';
+            this.style.left = moveX;
+            this.style.top = moveY;
+        });
+ 
+        oDiv.addEventListener('touchend', function () {
+			// console.log(e);
+            // 鼠标点击的坐标 和 抬起额坐标一致 就是点击事件
+            if (beforeX === this.offsetLeft && beforeY === this.offsetTop) {
+                alert('点击')
+            }
+        });
+		
+    }
+</script>
+</html>

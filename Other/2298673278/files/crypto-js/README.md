@@ -1,0 +1,1 @@
+# This is not a god damn cryptocurrency miner. This is a cryptographic module.

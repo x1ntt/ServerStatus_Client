@@ -1,0 +1,51 @@
+
+/*
+	悬浮窗的样式文件
+*/
+.main-div {
+	width: 650px;
+	height: auto;
+	border: 2px solid #EEEEEEAA;
+	position: fixed;
+	background-color:#EEEEEE00;
+	padding: 5px;
+	z-index: 999;
+}
+
+.top_fream{
+	border: 1px solid #00FFF000;
+	margin: 2px;
+	margin-bottom: 5px;
+	background-color: #DDDl;
+}
+
+.status_title{
+	font-size: 2.5rem;
+	color: #FF0000;
+	display: inline;
+}
+
+.close_btn{
+	width: 25px;
+	border: 1px solid #000000;
+	display: inline;
+	/*color: #000000;*/
+}
+
+.status_table{
+	width: 100%;
+	border: 1px solid #0000FF00;
+	text-align: center;
+	font-size: 1rem;
+	border-collapse:collapse;
+}
+
+.status_table td{
+	padding: 3px;
+	color: #CCCCCCAA;
+}
+
+.status_head {
+	background-color: #CCCCCCAA;
+	padding-bottom: 5px;
+}
