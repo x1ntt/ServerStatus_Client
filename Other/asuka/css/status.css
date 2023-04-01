@@ -2,12 +2,10 @@
 	width: 650px;
 	/*height: auto;*/
 	/*border: 2px solid #EEEEEE00;*/
-	position: fixed;
+	position: absolute;
 	/*background-color:#EEEEEE00;*/
 	padding: 5px;
-	top: 300px;
-	left: 500px;
-	z-index: 9999;
+	/*left: 500px;*/
 }
 
 .top_fream{
